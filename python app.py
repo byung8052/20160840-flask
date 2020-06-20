@@ -21,7 +21,7 @@ def method():
         with open("static/save.txt","w", encoding='utf-8') as f: 
             f.write("%s,%s" % (num, name))
         return "POST로 전달된 데이터({}, {})".format(num, name) 
-        
 if __name__ == '__main__': 
-    app.run(debug=True)
+    app.run(debug=True)        
+
 
