@@ -10,6 +10,9 @@ env/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+### db 파일 ###
+*.db
+
 ### Flask ###
 instance/*
 !instance/.gitignore
