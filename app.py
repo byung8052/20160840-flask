@@ -8,7 +8,15 @@ app.secret_key = b'aaa!111/'
 
 @app.route('/') 
 def index(): 
-    return '메인페이지' 
+    return render_template("main.html") 
+
+@app.route('/startgame') 
+def startgame(): 
+    return render_template('startgame.html') 
+
+@app.route('/join') 
+def join(): 
+    return render_template('join.html')
 
 # 로그인 
 @app.route('/login', methods=['GET', 'POST']) 
@@ -59,6 +67,7 @@ def method():
             '''.format(id) 
         else: 
             return "아이디 또는 패스워드를 확인 하세요." 
+
 
 if __name__ == '__main__': 
     app.run(debug=True)
